@@ -1,5 +1,4 @@
 'use strict'
-const assert = require('assert')
 const equal = require('../lib/json-equal.js')
 
 require('process').exit(
