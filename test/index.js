@@ -1,5 +1,6 @@
 'use strict'
 const {equal} = require('../lib/json-equal.js')
+const searchContainer = require('../lib/search-container.js').search
 
 require('process').exit(
   require('./lib/test-list.js')(
@@ -51,7 +52,7 @@ require('process').exit(
       'lib/search-container: .search(__dirname, "package.json")',
       () => {
         const {resolve} = require('path')
-        const result = require('../lib/search-container.js').search(__dirname, 'package.json')
+        const result = searchContainer(__dirname, 'package.json')
         const directory = resolve(__dirname, '..')
         const basename = 'package.json'
         const fullpath = resolve(directory, basename)
