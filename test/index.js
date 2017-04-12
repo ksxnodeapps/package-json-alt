@@ -2,7 +2,7 @@
 const {equal} = require('../lib/json-equal.js')
 
 require('process').exit(
-  (1 << 7) | require('./lib/test-list.js')(
+  require('./lib/test-list.js')(
     [
       'lib/json-equal: simple equal',
       () => [
