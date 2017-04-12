@@ -46,6 +46,25 @@ require('process').exit(
           [{abc: 123, def: 456}, {hello: {toString: () => 'world'}, empty: null, undef: undefined}]
         ]
       ].every(x => !equal(...x))
+    ],
+    [
+      'lib/search-container: .search(__dirname, "package.json")',
+      () => {
+        const {resolve} = require('path')
+        const result = require('../lib/search-container.js').search(__dirname, 'package.json')
+        const directory = resolve(__dirname, '..')
+        const basename = 'package.json'
+        const fullpath = resolve(directory, basename)
+        if (!equal([fullpath, directory, basename], result)) return false
+        return equal(
+          {fullpath, directory, basename},
+          {
+            fullpath: result.fullpath,
+            directory: result.directory,
+            basename: result.basename
+          }
+        )
+      }
     ]
   )
 )
