@@ -7,7 +7,6 @@
     "js-yaml": "^3.8.3"
   },
   "devDependencies": {
-    "assert": "^1.4.1",
     "standard": "^10.0.1"
   },
   "scripts": {
