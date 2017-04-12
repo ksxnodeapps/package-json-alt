@@ -12,6 +12,7 @@
   printf "Unit Test... "
   node test > stdout.tmp 2> stderr.tmp && (
     echo "passed"
+    cat stdout.tmp
   ) || (
     failcount=$?
     echo "failed" >&2
