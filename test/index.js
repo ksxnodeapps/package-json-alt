@@ -66,6 +66,14 @@ require('process').exit(
           }
         )
       }
+    ],
+    [
+      'lib/search-container: .search(__dirname, randomHexaString)',
+      () =>
+        searchContainer(
+          __dirname,
+          require('crypto').randomBytes(32).toString('hex')
+        ) === null
     ]
   )
 )
