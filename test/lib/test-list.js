@@ -13,7 +13,7 @@ module.exports = (...units) => units
           : testmsg(stderr, description, 'failed')
         return passed
       } catch (error) {
-        testmsg(stderr, description, `errored\n${error}`)
+        testmsg(stderr, description, `errored\n${error.stack}`)
         return false
       }
     }
