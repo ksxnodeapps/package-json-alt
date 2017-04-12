@@ -45,7 +45,7 @@ require('process').exit(
           [{abc: 123, def: {valueOf: () => 456}}, {hello: 'world', empty: null, undef: undefined}],
           [{abc: 123, def: 456}, {hello: {toString: () => 'world'}, empty: null, undef: undefined}]
         ]
-      ]
+      ].every(x => !equal(...x))
     ]
   )
 )
