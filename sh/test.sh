@@ -10,7 +10,7 @@
   )
 ) && (
   printf "Unit Test... "
-  node > stdout.tmp 2> stderr.tmp && (
+  node test > stdout.tmp 2> stderr.tmp && (
     echo "passed"
   ) || (
     exitcode=$?
