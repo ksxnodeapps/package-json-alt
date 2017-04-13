@@ -55,3 +55,7 @@ packageAlt(options)
 ### More
 
 Read [`index.js`](https://github.com/ksxnodemodules/package-alt/blob/v0.0.3/index.js#L7-L13)
+
+## License
+
+[MIT License](https://github.com/ksxnodemodules/package-alt/blob/master/LICENSE.md)
