@@ -51,3 +51,7 @@ packageAlt(options)
 * Type: String
 * Optional
 * Default to `options.entry.name + options.entry.ext`
+
+### More
+
+Read [`index.js`](https://github.com/ksxnodemodules/package-alt/blob/v0.0.3/index.js#L7-L13)
