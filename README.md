@@ -3,7 +3,7 @@ This package is a helper module for creating programs that compile file to `pack
 
 ## Requirements
 
-* Node.js >= 6.0.0 and npm
+* Node.js ≥ 6.0.0 and npm
 
 ## Usage
 
