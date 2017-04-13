@@ -89,7 +89,7 @@ require('process').exit(
         if (stderr && stderr.toString('utf8')) return false
         if (!stdout || !stdout.toString('utf8')) return false
         return equal(
-          JSON.parse(stdout.toString('utf8')).out,
+          JSON.parse(stdout.toString('utf8')).dump,
           {
             name: 'hypothetical-package',
             version: '1.2.3',

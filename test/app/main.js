@@ -2,11 +2,10 @@
 'use strict'
 
 const load = require('./index.js')
-let out
 
 load({
   dump (object) {
-    out = object
+    console.log(JSON.stringify({dump: object}))
     return require('fs')
       .readFileSync(
         require('path')
@@ -15,5 +14,3 @@ load({
       .toString('utf8')
   }
 })
-
-console.log(JSON.stringify({out}))
