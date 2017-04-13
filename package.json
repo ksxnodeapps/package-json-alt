@@ -1,7 +1,12 @@
 {
+  "name": "package-alt",
+  "description": "Alternate form of package.json",
   "version": "0.0.0",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "dependencies": {
+    "x-iterable-utils": "^1.0.0"
+  },
   "devDependencies": {
     "standard": "^10.0.1"
   },
