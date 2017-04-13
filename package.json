@@ -1,7 +1,7 @@
 {
   "name": "package-alt",
   "description": "Alternate form of package.json",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "dependencies": {
