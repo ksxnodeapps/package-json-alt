@@ -43,7 +43,7 @@ require('process').exit(
       () => [
         [
           {abc: 123, def: 456, foo: [...'foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: 'baz'},
-          {def: 456, def: 456, foo: ['foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']}
+          {def: 456, abc: 123, foo: ['foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']}
         ],
         [
           [{abc: 123, def: {valueOf: () => 456}}, {hello: 'world', empty: null, undef: undefined}],
