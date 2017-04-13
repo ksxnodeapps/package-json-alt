@@ -1,7 +1,7 @@
 'use strict'
 const {join} = require('path')
 const searchContainer = require('./lib/search-container.js').search
-const equal = require('./lib/json-equal.js')
+const {equal} = require('./lib/json-equal.js')
 const {parse, stringify} = JSON
 
 function main ({
