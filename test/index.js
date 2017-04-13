@@ -1,4 +1,5 @@
 'use strict'
+const {resolve} = require('path')
 const {equal} = require('../lib/json-equal.js')
 const searchContainer = require('../lib/search-container.js').search
 
@@ -51,7 +52,6 @@ require('process').exit(
     [
       'lib/search-container: .search(__dirname, "package.json")',
       () => {
-        const {resolve} = require('path')
         const result = searchContainer(__dirname, 'package.json')
         const directory = resolve(__dirname, '..')
         const basename = 'package.json'
@@ -74,6 +74,31 @@ require('process').exit(
           __dirname,
           require('crypto').randomBytes(32).toString('hex')
         ) === null
+    ],
+    [
+      'overall',
+      () => {
+        const {spawnSync} = require('child_process')
+        const {stdout, stderr} = spawnSync(
+          resolve(__dirname, 'app', 'main.js'),
+          {
+            cwd: resolve(__dirname, 'app'),
+            shell: true
+          }
+        )
+        if (stderr && stderr.toString('utf8')) return false
+        if (!stdout || !stdout.toString('utf8')) return false
+        return equal(
+          JSON.parse(stdout.toString('utf8')).out,
+          {
+            name: 'hypothetical-package',
+            version: '1.2.3',
+            author: 'Hypothetical Author',
+            main: 'index.js',
+            last: 'tested'
+          }
+        )
+      }
     ]
   )
 )
