@@ -15,5 +15,21 @@
     "clean": "bash 'sh/clean.sh'",
     "fix": "bash 'sh/fix.sh'",
     "test": "bash 'sh/test.sh'"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/package-alt.git"
+  },
+  "keywords": [
+    "package.json",
+    "package",
+    "alternate",
+    "npm",
+    "spawn"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/package-alt/issues"
+  },
+  "homepage": "https://github.com/ksxnodemodules/package-alt#readme"
 }
