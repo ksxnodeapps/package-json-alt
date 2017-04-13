@@ -1,9 +1,7 @@
 #! /usr/bin/env node
 'use strict'
 
-const load = require('./index.js')
-
-load({
+require('./index.js')({
   dump (object) {
     console.log(JSON.stringify({dump: object}))
     return require('fs')
