@@ -20,7 +20,9 @@ require('process').exit(
         [12, '12'], [undefined, 'undefined'], [null, 0], [null, 'null'],
         [null, ''], [null, false],
         ['abc', {toString: () => 'abc'}],
-        [357, {valueOf: () => 357}]
+        [357, {valueOf: () => 357}],
+        ['abcdef', 'fedabc'],
+        [[...'abcdef'], [...'fedcba']]
       ].every(x => !equal(...x))
     ],
     [
@@ -28,10 +30,10 @@ require('process').exit(
       () => [
         [
           {abc: 123, def: 456, foo: [...'foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']},
-          {abc: 123, def: 456, foo: [...'foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']}
+          {def: 456, abc: 123, foo: [...'foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']}
         ],
         [
-          [{abc: 123, def: 456}, {hello: 'world', empty: null, undef: undefined}],
+          [{def: 456, abc: 123}, {hello: 'world', empty: null, undef: undefined}],
           [{abc: 123, def: 456}, {hello: 'world', empty: null, undef: undefined}]
         ]
       ].every(x => equal(...x))
@@ -41,7 +43,7 @@ require('process').exit(
       () => [
         [
           {abc: 123, def: 456, foo: [...'foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: 'baz'},
-          {abc: 123, def: 456, foo: ['foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']}
+          {def: 456, def: 456, foo: ['foo', {foo: null}], bar: {a: 0, b: 1, c: 2}, bz: [...'baz']}
         ],
         [
           [{abc: 123, def: {valueOf: () => 456}}, {hello: 'world', empty: null, undef: undefined}],
